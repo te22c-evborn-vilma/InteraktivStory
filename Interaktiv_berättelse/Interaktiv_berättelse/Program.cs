@@ -3,11 +3,11 @@ Console.WriteLine("Vill du gå åt höger eller vänster?");
 
 string choice1 = Console.ReadLine();
 
-if (choice1 == "höger")                             //första frågan
+if (choice1 == "höger")                             //höger
 {
     Console.WriteLine("Du kommer till en gruva. Vill du gå in i gruvan eller gå vidare?");
 }
-else if (choice1 == "vänster")
+else if (choice1 == "vänster")                      //vänster
 {
     Console.WriteLine("Vägen tog slut. Vill du gå tillbaka?");
 }
