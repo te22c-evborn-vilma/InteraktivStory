@@ -1,57 +1,70 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System;
+string choice = "";
+
 Console.WriteLine("Vill du gå åt höger eller vänster?");
 
-string choice1 = Console.ReadLine();
+choice = Console.ReadLine();
+choice = choice.ToLower();
 
-if (choice1 == "höger")                             //höger
+if (choice == "höger")
 {
-    Console.WriteLine("Du kommer till en gruva. Vill du gå in i gruvan eller gå vidare?");
-}
-else if (choice1 == "vänster")                      //vänster
-{
-    Console.WriteLine("Vägen tog slut. Vill du gå tillbaka?");
-}
-// else
-// {
-    // Console.WriteLine("Försök igen");
-// }
+  Console.WriteLine("Du kommer till en gruva. Vill du gå in i gruvan?");
+  
+    choice = Console.ReadLine();
+    choice = choice.ToLower();
 
-
-string choice2 = Console.ReadLine();
-if (choice2 == "gå in i gruvan")                  //till höger - gå in i gruvan
+    if (choice == "ja")
 {
     Console.WriteLine("Hoppsan! Du blev attackerad av fladdermöss. Slut");
 }
-else if (choice2 == "gå vidare")                  //till höger - gå vidare
+else if (choice == "nej")
 {
-    Console.WriteLine("Du går förbi gruvan och kommer fram till en mur. Vill du stanna vid muren eller gå vidare?");
-}
-else if (choice2 == "ja")                         //till vänster - ja
-    {
-        Console.WriteLine("Du är tillbaka vid korsningen. Slut");
-    }
-else if (choice2 == "nej")                        //till vänster - nej
-{
-    Console.WriteLine("Du har inget val. Slut");
-}
-// else
-// {
-    // Console.WriteLine("Försök igen");
-// }
+    Console.WriteLine("Du går förbi gruvan och kommer fram till en mur. Vill du stanna vid muren?");
 
+    choice = Console.ReadLine();
+    choice = choice.ToLower();
 
-string choice3 = Console.ReadLine();
-if (choice3 == "stanna vid muren")                 //till höger - stanna vid muren
+    if (choice == "ja")
 {
     Console.WriteLine("Någon kastar dig över muren och du slår i huvudet mot en sten. Slut");
 }
-else if (choice3 == "gå vidare")                  //till höger - gå vidare
+else if (choice == "nej")
 {
     Console.WriteLine("Du är tillbaka där du började. Slut");
 }
-// else
-// {
-    // Console.WriteLine("Försök igen");
-// }
+ else
+  {
+    Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
+  }
 
+}
+else if (choice == "vänster")
+{
+  Console.WriteLine("Vägen tog slut. Vill du gå tillbaka?");
+
+  choice = Console.ReadLine();
+  choice = choice.ToLower();
+
+  if (choice == "ja")
+  {
+    Console.WriteLine("Du är tillbaka vid korsningen.Slut");
+    
+  }
+  else if (choice == "nej")
+  {
+    Console.WriteLine("Du har inget val. Slut");
+
+  }
+  else
+  {
+    Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
+  }
+}
+else
+{
+  Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
+}
+}
+Console.WriteLine("Tryck ENTER för att avsluta.");
 Console.ReadLine();
