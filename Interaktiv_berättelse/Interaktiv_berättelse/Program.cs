@@ -40,6 +40,7 @@ else if (choice == "nej")
 
   }
 }
+
 else if (choice == "vänster")
 {
   Console.WriteLine("Vägen tog slut. Vill du gå tillbaka?");
@@ -62,6 +63,7 @@ else if (choice == "vänster")
     Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
   }
 }
+
 else
 {
   Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
