@@ -15,29 +15,30 @@ if (choice == "höger")
     choice = choice.ToLower();
 
     if (choice == "ja")
-{
+  {
     Console.WriteLine("Hoppsan! Du blev attackerad av fladdermöss. Slut");
-}
-else if (choice == "nej")
-{
+  }
+  else if (choice == "nej")
+  {
     Console.WriteLine("Du går förbi gruvan och kommer fram till en mur. Vill du stanna vid muren?");
 
     choice = Console.ReadLine();
     choice = choice.ToLower();
 
     if (choice == "ja")
-{
+  {
     Console.WriteLine("Någon kastar dig över muren och du slår i huvudet mot en sten. Slut");
-}
+  }
 else if (choice == "nej")
-{
+  {
     Console.WriteLine("Du är tillbaka där du började. Slut");
-}
+  }
  else
   {
     Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
   }
 
+  }
 }
 else if (choice == "vänster")
 {
@@ -64,7 +65,8 @@ else if (choice == "vänster")
 else
 {
   Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
+
 }
-}
+
 Console.WriteLine("Tryck ENTER för att avsluta.");
 Console.ReadLine();
