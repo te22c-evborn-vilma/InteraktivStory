@@ -1,6 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System;
+﻿using System;
 string choice = "";
+
+Console.Title = "interaktiv text";
+Console.ForegroundColor = ConsoleColor.Black;
+Console.BackgroundColor = ConsoleColor.White;
 
 Console.WriteLine("Vill du gå åt höger eller vänster?");
 
@@ -11,10 +14,10 @@ if (choice == "höger")
 {
   Console.WriteLine("Du kommer till en gruva. Vill du gå in i gruvan?");
   
-    choice = Console.ReadLine();
-    choice = choice.ToLower();
+  choice = Console.ReadLine();
+  choice = choice.ToLower();
 
-    if (choice == "ja")
+  if (choice == "ja")
   {
     Console.WriteLine("Hoppsan! Du blev attackerad av fladdermöss. Slut");
   }
@@ -26,21 +29,20 @@ if (choice == "höger")
     choice = choice.ToLower();
 
     if (choice == "ja")
-  {
-    Console.WriteLine("Någon kastar dig över muren och du slår i huvudet mot en sten. Slut");
-  }
-else if (choice == "nej")
-  {
-    Console.WriteLine("Du är tillbaka där du började. Slut");
-  }
- else
-  {
-    Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
-  }
+    {
+      Console.WriteLine("Någon kastar dig över muren och du slår i huvudet mot en sten. Slut");
+    }
+    else if (choice == "nej")
+    {
+      Console.WriteLine("Du är tillbaka där du började. Slut");
+    }
+    else
+    {
+      Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
+    }
 
   }
 }
-
 else if (choice == "vänster")
 {
   Console.WriteLine("Vägen tog slut. Vill du gå tillbaka?");
@@ -51,24 +53,20 @@ else if (choice == "vänster")
   if (choice == "ja")
   {
     Console.WriteLine("Du är tillbaka vid korsningen.Slut");
-    
   }
   else if (choice == "nej")
   {
     Console.WriteLine("Du har inget val. Slut");
-
   }
   else
   {
     Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
   }
 }
-
 else
 {
   Console.WriteLine("Hoppsan! Du skrev något som jag inte förstod");
-
 }
 
-Console.WriteLine("Tryck ENTER för att avsluta.");
+Console.WriteLine("Tryck på ENTER för att avsluta.");
 Console.ReadLine();
